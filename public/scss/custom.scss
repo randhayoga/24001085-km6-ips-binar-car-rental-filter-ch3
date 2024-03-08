@@ -32,23 +32,6 @@ $carousel-control-opacity: 1;
 // import bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Floating card (for the filter form)
-.floating-card {
-  @extend .card;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(241, 243, 255, 0.5);
-  border-radius: 10px;
-  padding: 20px;
-}
-.floating-card-container {
-  @extend .container;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
 // Passanger spinner (with icon)
 .passenger-count {
   background-image: url(../../node_modules/bootstrap-icons/icons/people.svg);
