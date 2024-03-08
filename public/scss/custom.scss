@@ -1,0 +1,59 @@
+// custom colors
+$primary: #5cb85f;
+$light: #f1f3ff;
+$secondary: #0d28a6;
+$link-color: #000000;
+
+// custom button
+$accordion-border-width: medium;
+$accordion-border-radius: 5px;
+$accordion-inner-border-radius: 5px;
+$accordion-button-active-bg: #ffffff;
+// How to remove the annoying color highlight???
+
+// carousel
+$carousel-control-color: #000000;
+$carousel-control-opacity: 1;
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: TranslateY(-8%);
+}
+.carousel-control-prev {
+  right: auto;
+  left: 20px;
+}
+.carousel-control-next {
+  left: auto;
+  right: 20px;
+}
+
+// import bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Floating card (for the filter form)
+.floating-card {
+  @extend .card;
+  position: absolute;
+  top: 50%;
+  min-width: 90%;
+  max-width: 90%;
+  transform: translateY(-50%);
+  background-color: rgba(241, 243, 255, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+.floating-card-container {
+  @extend .container;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+// Passanger spinner (with icon)
+.passenger-count {
+  background-image: url(../../node_modules/bootstrap-icons/icons/people.svg);
+  background-repeat: no-repeat;
+  background-position: 95.5% center;
+}
