@@ -37,8 +37,6 @@ $carousel-control-opacity: 1;
   @extend .card;
   position: absolute;
   top: 50%;
-  min-width: 90%;
-  max-width: 90%;
   transform: translateY(-50%);
   background-color: rgba(241, 243, 255, 0.5);
   border-radius: 10px;
