@@ -1,16 +1,15 @@
 {
-  "name": "binar-fsw-challenge-04",
+  "name": "24001085-km6-ips-binar-car-rental-filter-ch2",
   "version": "1.0.0",
-  "description": "Project HTTP Server dan DOM",
-  "main": "server/index.js",
-  "author": "Fikri Rahmat Nurhidayat <fnurhidayat@binar.co.id>",
-  "license": "MIT",
-  "private": false,
+  "description": "Page untuk filtering mobil rental yang dibuat untuk memenuhi Challange Chapter 2 FSW Binar Academy",
+  "main": "index.js",
   "scripts": {
-    "start": "node server/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3"
+    "bootstrap": "^5.3.3"
   }
 }
