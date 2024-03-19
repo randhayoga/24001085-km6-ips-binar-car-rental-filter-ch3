@@ -23,7 +23,7 @@ filterButton.addEventListener("click", function (event) {
     arrOfFilteredCars.map((filteredCar) => {
         filteredCardWithCars += `<div class="col-lg-6 col-xl-4 mb-4">
         <div class="card shadow-sm p-3 bg-white h-100">
-          <img src="${filteredCar.image}" class="img-fluid" style="max-height: 275px; object-fit: cover;">
+          <img src="${filteredCar.image}" class="img-fluid" style="max-height: 200px; object-fit: cover;">
           <p class="card-text fw-medium" style="margin-top: 10px; margin-bottom: 5px;">${filteredCar.manufacture} ${filteredCar.model}</p>
           <h5 class="card-title">Rp ${filteredCar.rentPerDay} / hari</h5>
           <p class="card-text">${filteredCar.description}</p>

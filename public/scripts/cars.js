@@ -1,5 +1,5 @@
 // Importing data
-import cars from "../data/cars.min.json" assert { type: "json" };
+import cars from "../../data/cars.min.json" assert { type: "json" };
 
 // Functions (biar ada OOP-annya dikit)
 class Car {
