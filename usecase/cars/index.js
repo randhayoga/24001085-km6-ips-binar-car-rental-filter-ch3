@@ -1,7 +1,7 @@
 const carRepo = require("../../repository/cars/index.js");
 
-exports.getCars = (capacity, dateTime) => {
-  const data = carRepo.getCars(capacity, dateTime);
+exports.getCars = (capacity, date, time) => {
+  const data = carRepo.getCars(capacity, date, time);
   return data;
 };
 

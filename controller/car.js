@@ -3,6 +3,7 @@ const carUseCase = require("../usecase/cars/index.js");
 
 exports.getCars = (req, res) => {
   const { capacity, date, time } = req.query;
+
   const data = carUseCase.getCars(capacity, date, time);
 
   const response = {
