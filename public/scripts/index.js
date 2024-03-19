@@ -28,7 +28,7 @@ async function getCars(desiredCapacity, desiredDate, desiredTime) {
               style="height: 22px;">&ensp;${filteredCar.transmission}</span>
           <span class="mt-2"><img src="images/icon_calendar4.svg"
               style="height: 22px;">&ensp;Tahun ${filteredCar.year}</span>
-          <div class="card-body d-flex flex-column">
+          <div class="card-body d-flex flex-column pt-4">
             <button type="button" class="btn btn-primary mt-auto" style="color: #ffffff; width: 100%">Pilih Mobil</button>
           </div>
         </div>
