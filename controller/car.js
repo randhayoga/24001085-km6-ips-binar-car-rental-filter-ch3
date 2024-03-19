@@ -137,7 +137,7 @@ exports.postCar = (req, res, next) => {
 
   const data = carUseCase.postCar(req.body);
 
-  res.status(201).json(response);
+  res.status(201).json(data);
 };
 
 exports.putCar = (req, res, next) => {
@@ -252,12 +252,12 @@ exports.putCar = (req, res, next) => {
 
   const data = carUseCase.putCar(id, updatedCar);
 
-  res.status(201).json(response);
+  res.status(201).json(data);
 };
 
 exports.deleteCar = (req, res, next) => {
   const id = req?.params?.id;
   const data = carUseCase.deleteCar(id);
 
-  res.status(200).json(response);
+  res.status(200).json(data);
 };

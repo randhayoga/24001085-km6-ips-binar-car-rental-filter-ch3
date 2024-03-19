@@ -38,8 +38,6 @@ exports.getCar = (id) => {
 };
 
 exports.postCar = (payload) => {
-  const lastCar = cars[cars.length - 1];
-
   payload = {
     id: uuidv4(),
     ...payload,
@@ -66,7 +64,9 @@ exports.putCar = (id, payload) => {
 
 exports.deleteCar = (id) => {
   index = cars.findIndex((car) => car.id == id);
-  cars.slice(index, 1);
+  const deletedCar = cars[index];
 
-  return null;
+  cars.splice(index, 1);
+
+  return deletedCar;
 };
