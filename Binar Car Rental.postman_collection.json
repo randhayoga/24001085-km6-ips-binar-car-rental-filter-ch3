@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "2567113c-9aaf-4ef1-ba29-b6ac035c1ee2",
+		"name": "Binar Car Rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30803893"
+	},
+	"item": [
+		{
+			"name": "Get Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cars?capacity=2&date=2019-03-01&time=07:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					],
+					"query": [
+						{
+							"key": "capacity",
+							"value": "2"
+						},
+						{
+							"key": "date",
+							"value": "2019-03-01"
+						},
+						{
+							"key": "time",
+							"value": "07:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cars/6e2bc663-5197-441a-957b-bc75e4a2da7c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"6e2bc663-5197-441a-957b-bc75e4a2da7c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plate\": \"TGR-8686\",\r\n    \"manufacture\": \"Toyota\",\r\n    \"model\": \"GR86\",\r\n    \"image\": \"./images/car86.jpeg\",\r\n    \"rentPerDay\": 860000,\r\n    \"capacity\": 2,\r\n    \"description\": \" Manual. Rear wheel drive. Pure sport car experience.\",\r\n    \"availableAt\": \"2022-03-25T15:49:05.563Z\",\r\n    \"transmission\": \"Manual\",\r\n    \"available\": true,\r\n    \"type\": \"Coupe\",\r\n    \"year\": 2022,\r\n    \"options\": [\r\n      \"Cruise Control\",\r\n      \"Tinted Glass\",\r\n      \"AM/FM Stereo\"\r\n    ],\r\n    \"specs\": [\r\n      \"Brake assist\",\r\n      \"Leather-wrapped shift knob\",\r\n      \"Glove box lamp\",\r\n      \"Air conditioning w/in-cabin microfilter\",\r\n      \"Dual-stage front airbags w/occupant classification system\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"plate\": \"BMW-3000\",\r\n            \"manufacture\": \"BMW\",\r\n            \"model\": \"M3\",\r\n            \"image\": \"./images/carm3.jpg\",\r\n            \"rentPerDay\": 1000000,\r\n            \"capacity\": 5,\r\n            \"description\": \" Rear passenger map pockets. Electrochromic rearview mirror. Dual chrome exhaust tips. Locking glove box.\",\r\n            \"availableAt\": \"2022-03-23T15:49:05.563Z\",\r\n            \"transmission\": \"Automatic\",\r\n            \"available\": true,\r\n            \"type\": \"Sedan\",\r\n            \"year\": 2023,\r\n            \"options\": [\r\n                \"Keyless Entry\",\r\n                \"Power Windows\",\r\n                \"MP3 (Single Disc)\",\r\n                \"CD (Multi Disc)\",\r\n                \"Navigation\"\r\n            ],\r\n            \"specs\": [\r\n                \"Rear passenger map pockets\",\r\n                \"Electrochromic rearview mirror\",\r\n                \"Dual chrome exhaust tips\",\r\n                \"Locking glove box\",\r\n                \"Pwr front vented disc/rear drum brakes\"\r\n            ]\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars/e32f60c2-1a50-4154-a6a7-a0aaff714320",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"e32f60c2-1a50-4154-a6a7-a0aaff714320"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cars/6e2bc663-5197-441a-957b-bc75e4a2da7c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"6e2bc663-5197-441a-957b-bc75e4a2da7c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
