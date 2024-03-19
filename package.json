@@ -1,16 +1,18 @@
 {
-  "name": "24001085-km6-ips-binar-car-rental-filter-ch2",
-  "version": "1.0.0",
-  "description": "Page untuk filtering mobil rental yang dibuat untuk memenuhi Challange Chapter 2 FSW Binar Academy",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3"
-  }
+    "name": "24001085-km6-ips-binar-car-rental-filter-ch2",
+    "version": "1.0.0",
+    "description": "Page untuk filtering mobil rental yang dibuat untuk memenuhi Challange Chapter 2 FSW Binar Academy",
+    "main": "index.js",
+    "scripts": {
+        "dev": "npx nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^5.3.3",
+        "express": "^4.18.3",
+        "nodemon": "^3.1.0",
+        "uuid": "^9.0.1"
+    }
 }

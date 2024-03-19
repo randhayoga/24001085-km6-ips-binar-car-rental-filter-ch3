@@ -1,27 +1,21 @@
 import cars from "./cars.js";
 
-// Element constants declaration
 const filteredCard = document.getElementById("carCard");
 const filterButton = document.getElementById("searchBtn");
 
-// Main
-filterButton.addEventListener("click", function (event) {
-    event.preventDefault();
+async function getCars(desiredCapacity, desiredDate, desiredTime) {
+  // The HTML forms separates the date and time while the JSON data combines both in a single key and value
 
-    // Form constant declaration
-    const desiredCap = document.getElementById("passengerCount").value;
-    const desiredDate = document.getElementById("dateInput").value;
-    const desiredTime = document.getElementById("timeInput").value;
-    const arrOfFilteredCars = cars.filterCars(
-        desiredCap,
-        desiredDate,
-        desiredTime
-    );
+  const filteredCarsData = await cars.getCarsData(
+    desiredCapacity,
+    desiredDate,
+    desiredTime
+  );
 
-    let filteredCardWithCars = "";
+  let filteredCardWithCars = "";
 
-    arrOfFilteredCars.map((filteredCar) => {
-        filteredCardWithCars += `<div class="col-lg-6 col-xl-4 mb-4">
+  filteredCarsData.map((filteredCar) => {
+    filteredCardWithCars += `<div class="col-lg-6 col-xl-4 mb-4">
         <div class="card shadow-sm p-3 bg-white h-100">
           <img src="${filteredCar.image}" class="img-fluid" style="max-height: 200px; object-fit: cover;">
           <p class="card-text fw-medium" style="margin-top: 10px; margin-bottom: 5px;">${filteredCar.manufacture} ${filteredCar.model}</p>
@@ -37,7 +31,17 @@ filterButton.addEventListener("click", function (event) {
           </div>
         </div>
       </div>`;
-    });
+  });
 
-    filteredCard.innerHTML = filteredCardWithCars;
+  filteredCard.innerHTML = filteredCardWithCars;
+}
+
+filterButton.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const desiredCapacity = document.getElementById("passengerCount").value;
+  const desiredDate = document.getElementById("dateInput").value;
+  const desiredTime = document.getElementById("timeInput").value;
+
+  getCars(desiredCapacity, desiredDate, desiredTime);
 });
